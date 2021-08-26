@@ -1,0 +1,13 @@
+<h1 class="main-title">Сканирование из веба</h1>
+<div class="main-block">
+  <div *ngIf="images.length === 0" class="prview">
+    <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg">
+  </div>
+  <div class="main-block__file" *ngFor="let image of images" style="padding: 10px">
+    <img height="200px" width="200px" [src]="getImgUrl(image)">
+  </div>
+</div>
+<div class="controls">
+  <button class="btn" (click)="scanImage()">Сканировать</button>
+  <a class="link" href="./assets/scan-app/Scan_App_SetUp.msi">Скачать программу</a>
+</div>
